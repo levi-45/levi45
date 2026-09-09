@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Levi45 Community Forum</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="forum-header">
+            <h1>Levi45 Community</h1>
+            <p class="subtitle">An independent space for Enigma2 users</p>
+            <div class="auth-status">
+                <button id="loginBtn" class="btn-primary">Log in with email link</button>
+                <span id="userDisplay" style="display:none;">Welcome, <span id="userEmail"></span>!</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>🔒 Levi45 Community Private Space</h2>
+                    <p>Log in with the code sent to your email</p>
+                    <form id="loginForm">
+                        <input type="email" id="emailInput" placeholder="Enter your email" required />
+                        <button type="submit" class="btn-primary">Send Magic Link</button>
+                    </form>
+                    <div id="loginMessage"></div>
+                </div>
+            </div>
+
+            <!-- Create Post Section -->
+            <section class="create-post">
+                <h2>📝 Post a question, information, or update</h2>
+                <form id="postForm">
+                    <div class="form-group">
+                        <label for="postType">Post type:</label>
+                        <select id="postType">
+                            <option value="issue">Issue</option>
+                            <option value="information">Information</option>
+                            <option value="update">Update</option>
+                            <option value="guide">Guide</option>
+                            <option value="discussion">Discussion</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postTitle">Title:</label>
+                        <input type="text" id="postTitle" placeholder="Your post title" required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postContent">Content (max 50,000 characters):</label>
+                        <textarea id="postContent" rows="8" placeholder="Write your post here... Links will be automatically highlighted"></textarea>
+                        <div class="char-counter">0 / 50,000</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postTag">Tag (plugin, app, or system):</label>
+                        <input type="text" id="postTag" placeholder="e.g., Enigma2, OpenATV, IPTV" />
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Publish Post</button>
+                </form>
+                <p class="note">New accounts may require approval of the first post.</p>
+            </section>
+
+            <!-- Posts Feed -->
+            <section class="posts-feed">
+                <h2>📬 Community Posts</h2>
+                <div id="postsContainer">
+                    <!-- Posts will be rendered here by JavaScript -->
+                    <p class="loading">Loading posts...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
