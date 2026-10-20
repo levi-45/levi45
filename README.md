@@ -79,3 +79,27 @@ The seven download categories are defined in `script.js` and are always shown, e
 
 ## XenForo-style category rows
 The homepage and Downloads page display seven full-width rows with icons, live download counts, and the latest matching resource. Counts are calculated from `data/content.json`. To add a resource, create an item with `type: "download"` and a `category` matching one of the seven category names exactly. No sample download is included.
+
+
+## New: subcategories
+Click any main category on the homepage to see its subcategories. Click a subcategory to view its files.
+
+To add a download, insert a new object in `data/content.json` inside `items`, for example:
+
+```json
+{
+  "id": "my-openatv-file",
+  "type": "download",
+  "title": "OpenATV image for my receiver",
+  "mainCategory": "Enigma2 Image Teams",
+  "subcategory": "OpenATV",
+  "category": "Enigma2 Image Teams",
+  "date": "2026-10-20",
+  "version": "1.0",
+  "summary": "Describe the image and supported receiver.",
+  "body": "Detailed information about this download.",
+  "file": "downloads/my-image.zip"
+}
+```
+
+Upload the matching file under `downloads/`. Do not include example files unless you want them published. Keep your existing content.json if you have published articles; merge the new entries instead of overwriting.

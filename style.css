@@ -16,3 +16,8 @@
 .category-forum-row .latestcell{border-left:1px solid #e5edf3;padding-left:14px}
 @media(max-width:850px){.category-forum-row{grid-template-columns:38px minmax(0,1fr) 78px}.category-forum-row .latestcell{display:none}}
 @media(max-width:570px){.category-forum-row{grid-template-columns:32px minmax(0,1fr) 58px}.category-forum-row .counts{display:block}.category-forum-row .count-label{font-size:10px}}
+
+/* Subcategory navigation */
+.category-back{display:inline-block;margin:0 0 15px;color:#176aa5;font-weight:600;text-decoration:none}
+.category-back:hover{text-decoration:underline}
+@media(max-width:620px){.category-forum-row{grid-template-columns:42px minmax(0,1fr)!important}.category-forum-row .counts,.category-forum-row .latestcell{grid-column:2;justify-self:start;text-align:left}}
