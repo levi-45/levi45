@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "welcome",
+      "type": "news",
+      "category": "Announcements",
+      "title": "Welcome to Levi45 Community",
+      "date": "2026-10-20",
+      "summary": "A new home for Enigma2 downloads, news and tutorials.",
+      "body": "Welcome! This website is a place to share Enigma2 resources and helpful information.\n\nCheck the Downloads section for files and Guides & Tutorials for step-by-step help. No registration is needed."
+    },
+    {
+      "id": "backup-guide",
+      "type": "guide",
+      "category": "Receiver basics",
+      "title": "Before you update: back up your receiver",
+      "date": "2026-10-20",
+      "summary": "A short checklist to follow before installing a new image or plugin.",
+      "body": "1. Confirm the exact receiver model and current image version.\n\n2. Use your image's backup feature to save settings and a full backup where available.\n\n3. Copy the backup to a USB drive or computer.\n\n4. Read the release notes and confirm compatibility before installing.\n\n5. Keep a recovery method available in case the update fails."
+    }
+  ]
+}
