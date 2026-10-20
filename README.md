@@ -71,3 +71,7 @@ Optional download fields: `version`, `size`, `receivers` (list), `screenshots` (
 The included example resource has no file and is for demonstration only; remove or replace it before publishing real downloads.
 Add screenshot images to an `images/` folder in the repository.
 GitHub Pages is static: it does not count downloads, accept uploads from visitors, or provide user accounts.
+
+
+## Seven homepage categories
+The seven download categories are defined in `script.js` and are always shown, even when empty. For a download to appear under a category, use the exact category name in `data/content.json`. Categories: Enigma2 Image Teams, Enigma2 Plugins, Enigma2 Skins, IPTV, SoftCam, Satellite Receiver, Tools.

@@ -1,7 +1,7 @@
 'use strict';
 let items=[];let view='home';let category='All';let query='';
 const $=id=>document.getElementById(id);
-const downloadCategories=[['OpenATV','OpenATV images, updates and related files'],['OpenPLi','OpenPLi images and resources'],['Enigma2 Plugins','Extensions, utilities and addons'],['Channel Lists','Bouquets and channel settings'],['Picons','Channel logos and icon packs'],['Receiver Tools','Backup, flashing and maintenance tools']];
+const downloadCategories=[['Enigma2 Image Teams','Firmware images from OpenATV, OpenPLi, OpenViX and more'],['Enigma2 Plugins','Extensions, addons and useful plugins'],['Enigma2 Skins','Themes, skins and interface customisations'],['IPTV','Players, apps and setup guides for legitimate services'],['SoftCam','Software and guidance for authorised conditional access'],['Satellite Receiver','Receiver firmware, information and support'],['Tools','Backup, flashing, maintenance and utility tools']];
 function el(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n}
 function link(label,hash,cls){const a=el('a',cls,label);a.href=hash;return a}
 function safeDownload(path){if(typeof path!=='string')return null;const s=path.trim();if(/^downloads\/[a-zA-Z0-9_./-]+$/.test(s)&&!s.split('/').includes('..'))return './'+s; if(/^https:\/\/[\w.-]+(?:\/[\w!#$&'()*+,;=:@%./?~-]*)?$/.test(s))return s;return null}
