@@ -7,3 +7,12 @@
 
 /* Resource Manager details */
 .resource-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;background:#f4f7fb;border:1px solid #dce5f1;border-radius:9px;padding:18px;margin-bottom:20px}.resource-fact{display:flex;flex-direction:column;gap:4px;min-width:0}.resource-fact strong{overflow-wrap:anywhere}.resource-summary{font-size:1.08rem;font-weight:600}.article-body{white-space:pre-wrap;line-height:1.8;overflow-wrap:anywhere}.resource-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:12px 0 22px}.resource-gallery img{width:100%;max-height:250px;object-fit:contain;border:1px solid #dce5f1;border-radius:8px;background:#fff}.download-now{display:inline-block;margin:24px 0 12px;padding:14px 25px;background:#1769ae;color:#fff!important;font-weight:700;text-decoration:none;border-radius:7px}.download-now:hover{background:#0d4f8c}.article h3{margin:24px 0 8px}@media(max-width:560px){.resource-details{grid-template-columns:1fr}}
+
+/* XenForo-style full-width resource category rows */
+.category-forum-row{min-height:86px;grid-template-columns:46px minmax(0,1fr) 92px minmax(145px,190px)}
+.category-forum-row .forumicon{font-size:26px}
+.category-forum-row .forumtitle{display:inline-block;font-size:15px}
+.category-forum-row .count-label{display:block;color:#71869b;margin-bottom:3px}
+.category-forum-row .latestcell{border-left:1px solid #e5edf3;padding-left:14px}
+@media(max-width:850px){.category-forum-row{grid-template-columns:38px minmax(0,1fr) 78px}.category-forum-row .latestcell{display:none}}
+@media(max-width:570px){.category-forum-row{grid-template-columns:32px minmax(0,1fr) 58px}.category-forum-row .counts{display:block}.category-forum-row .count-label{font-size:10px}}

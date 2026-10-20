@@ -75,3 +75,7 @@ GitHub Pages is static: it does not count downloads, accept uploads from visitor
 
 ## Seven homepage categories
 The seven download categories are defined in `script.js` and are always shown, even when empty. For a download to appear under a category, use the exact category name in `data/content.json`. Categories: Enigma2 Image Teams, Enigma2 Plugins, Enigma2 Skins, IPTV, SoftCam, Satellite Receiver, Tools.
+
+
+## XenForo-style category rows
+The homepage and Downloads page display seven full-width rows with icons, live download counts, and the latest matching resource. Counts are calculated from `data/content.json`. To add a resource, create an item with `type: "download"` and a `category` matching one of the seven category names exactly. No sample download is included.
