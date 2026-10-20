@@ -17,6 +17,23 @@
       "date": "2026-10-20",
       "summary": "A short checklist to follow before installing a new image or plugin.",
       "body": "1. Confirm the exact receiver model and current image version.\n\n2. Use your image's backup feature to save settings and a full backup where available.\n\n3. Copy the backup to a USB drive or computer.\n\n4. Read the release notes and confirm compatibility before installing.\n\n5. Keep a recovery method available in case the update fails."
+    },
+    {
+      "id": "sample-plugin",
+      "type": "download",
+      "category": "Enigma2 Plugins",
+      "title": "Example plugin resource (sample only)",
+      "date": "2026-10-20",
+      "version": "1.0",
+      "size": "Not uploaded",
+      "receivers": [
+        "Enigma2 (verify model compatibility)"
+      ],
+      "summary": "Demonstration resource page. Replace this entry with your own file details.",
+      "body": "This is an example listing to show the Resource Manager layout. No file has been uploaded.",
+      "installation": "1. Check compatibility with your receiver and image.\n2. Back up your settings.\n3. Follow the installation instructions supplied with your actual download.",
+      "screenshots": [],
+      "file": ""
     }
   ]
 }
