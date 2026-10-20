@@ -40,3 +40,25 @@ Add another entry with `"type": "news"` or `"type": "guide"`; provide `id`, `cat
 - No backend means no reliable download counts, private files, or user accounts.
 - Only upload files safe and legal to share. GitHub Pages and repository hosting have usage and size limits.
 - Check JSON syntax when editing; invalid JSON stops the library from loading.
+
+
+## Download categories
+
+The Downloads page now shows six permanent categories: **OpenATV**, **OpenPLi**, **Enigma2 Plugins**, **Channel Lists**, **Picons**, and **Receiver Tools**. Categories remain visible even when empty.
+
+To add a download, upload your file into `downloads/`, then add an entry to `data/content.json` under `items`. Example:
+
+```json
+{
+  "id": "my-plugin-v1",
+  "type": "download",
+  "category": "Enigma2 Plugins",
+  "title": "My Enigma2 Plugin v1",
+  "date": "2026-10-20",
+  "summary": "Description and supported receiver models.",
+  "body": "Installation instructions and compatibility notes.",
+  "file": "downloads/my-plugin-v1.ipk"
+}
+```
+
+Remember to put a comma between JSON entries. The website has no registration, login, database or paid service. GitHub repository file-size and bandwidth limits still apply.
