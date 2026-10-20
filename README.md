@@ -103,3 +103,14 @@ To add a download, insert a new object in `data/content.json` inside `items`, fo
 ```
 
 Upload the matching file under `downloads/`. Do not include example files unless you want them published. Keep your existing content.json if you have published articles; merge the new entries instead of overwriting.
+
+## Resource Publisher (offline, no database)
+
+1. Extract this ZIP on your computer. Open `publisher.html` in a browser.
+2. Download the **current** `data/content.json` from your GitHub repository and select it in the publisher. This preserves your existing entries.
+3. Enter a download, news item or tutorial and click **Add to draft**. Repeat for additional entries.
+4. Click **Download updated content.json** and upload it to the repository as `data/content.json`, replacing that file only.
+5. For downloads, separately upload the actual file to `downloads/` (e.g. `downloads/my-plugin.zip`). For screenshots upload images to `images/`. Use those paths in the publisher.
+6. Commit the changes; GitHub Pages will update shortly afterward.
+
+**Important:** Do not upload `publisher.html` or `publisher.js` to your public site. The publisher runs locally, is not an authenticated admin panel, and does not upload files or publish directly to GitHub. Always start with the latest `content.json` to avoid overwriting newer content. Keep a backup of your repository before updating.
