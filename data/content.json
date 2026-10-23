@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "id": "levi45-settings-2-4-all-2026-10-23",
+      "type": "download",
+      "title": "Levi45 settings 2.4 all",
+      "date": "2026-10-23",
+      "category": "Enigma2 Plugins",
+      "summary": "",
+      "body": "",
+      "mainCategory": "Enigma2 Plugins",
+      "subcategory": "Extensions",
+      "version": "2.4",
+      "size": "",
+      "file": "downloads/enigma2-plugin-extensions-levi45-settings_2.4_all.deb",
+      "files": [
+        "downloads/enigma2-plugin-extensions-levi45-settings_2.4_all.deb",
+        "downloads/enigma2-plugin-extensions-levi45-settings_2.4_all.ipk"
+      ],
+      "receivers": [],
+      "screenshots": [],
+      "installation": ""
+    },
+    {
       "id": "open-atv-image-2026-10-23",
       "type": "download",
       "title": "Open Atv image",
