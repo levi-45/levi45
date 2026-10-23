@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "id": "openpli-image-download-2026-10-23",
+      "type": "download",
+      "title": "openpli image download",
+      "date": "2026-10-23",
+      "category": "Enigma2 Image Teams",
+      "summary": "",
+      "body": "",
+      "mainCategory": "Enigma2 Image Teams",
+      "subcategory": "OpenPLi",
+      "version": "",
+      "size": "",
+      "file": "https://openpli.org/download/",
+      "files": [
+        "https://openpli.org/download/"
+      ],
+      "receivers": [],
+      "screenshots": [],
+      "installation": ""
+    },
+    {
       "id": "levi45-settings-2-4-all-2026-10-23",
       "type": "download",
       "title": "Levi45 settings 2.4 all",
