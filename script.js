@@ -84,8 +84,9 @@ function render(){const root=$('content');root.replaceChildren();if(syncCategory
      if(gallery.childElementCount){a.append(el('h3','','Screenshots'),gallery)}
    }
    if(x.installation){a.append(el('h3','','Installation instructions'),el('div','article-body',x.installation))}
-   const path=safeDownload(x.file);
-   if(path){const button=link('⬇ Download Now',path,'download-now');button.setAttribute('download','');a.append(button)}
+   const sources=Array.isArray(x.files)&&x.files.length?x.files:(x.file?[x.file]:[]);
+   const valid=sources.map(safeDownload).filter(Boolean);
+   if(valid.length){a.append(el('h3','','Available downloads'));valid.forEach((path,i)=>{const label=decodeURIComponent(path.split('/').pop().split('?')[0])||('File '+(i+1));const button=link('⬇ Download '+(valid.length>1?(i+1)+' — ':'')+label,path,'download-now');button.setAttribute('download','');button.setAttribute('target','_blank');button.setAttribute('rel','noopener noreferrer');a.append(button)})}
    else a.append(el('p','muted','No download file has been added yet.'));
    a.append(el('p','muted small','Check compatibility and back up your receiver before installing.'));
  }
