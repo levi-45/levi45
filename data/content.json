@@ -1,6 +1,25 @@
 {
   "items": [
     {
+      "id": "enigma2-plugin-extensions-levi45emulator-1-4-all-2026-10-23",
+      "type": "download",
+      "title": "enigma2 plugin extensions levi45emulator 1.4 all",
+      "date": "2026-10-23",
+      "category": "SoftCam",
+      "summary": "",
+      "body": "",
+      "mainCategory": "SoftCam",
+      "subcategory": "SoftCam Managers",
+      "version": "levi45emulator 1.4",
+      "size": "",
+      "file": "downloads/enigma2-plugin-extensions-levi45emulator_1.4_all.ipk",
+      "receivers": [
+        "For all supported boxes"
+      ],
+      "screenshots": [],
+      "installation": ""
+    },
+    {
       "id": "enigma2-plugin-softcams-oscam-emu-pcsc-levi45-11968-803-all-2026-10-23",
       "type": "download",
       "title": "enigma2 plugin softcams oscam emu pcsc levi45 11968 803 all",
