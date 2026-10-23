@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "id": "enigma2-plugin-extensions-levi45-addon-10-2-r0-all-2026-10-20",
+      "type": "download",
+      "title": "levi45 addon 10.2 r0 all",
+      "date": "2026-10-23",
+      "category": "Enigma2 Plugins",
+      "summary": "",
+      "body": "",
+      "mainCategory": "Enigma2 Plugins",
+      "subcategory": "Extensions",
+      "version": "10.2 r0",
+      "size": "",
+      "file": "downloads/enigma2-plugin-extensions-levi45-addon_10.2-r0_all.deb",
+      "receivers": [],
+      "screenshots": [],
+      "installation": "",
+      "files": [
+        "downloads/enigma2-plugin-extensions-levi45-addon_10.2-r0_all.deb",
+        "downloads/enigma2-plugin-extensions-levi45-addon_10.2-r0_all.ipk"
+      ]
+    },
+    {
       "id": "openpli-image-download-2026-10-23",
       "type": "download",
       "title": "openpli image download",
@@ -95,25 +116,6 @@
       ],
       "screenshots": [],
       "installation": "install as normal"
-    },
-    {
-      "id": "enigma2-plugin-extensions-levi45-addon-10-2-r0-all-2026-10-20",
-      "type": "download",
-      "title": "enigma2 plugin extensions levi45 addon 10.2 r0 all",
-      "date": "2026-10-20",
-      "category": "Enigma2 Plugins",
-      "summary": "",
-      "body": "",
-      "mainCategory": "Enigma2 Plugins",
-      "subcategory": "Extensions",
-      "version": "Levi45 Addons Panel 10.2.r0",
-      "size": "",
-      "file": "downloads/enigma2-plugin-extensions-levi45-addon_10.2-r0_all.ipk",
-      "receivers": [
-        "With all enigma 2 box and images"
-      ],
-      "screenshots": [],
-      "installation": ""
     },
     {
       "id": "welcome",
