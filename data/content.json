@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "id": "enigma2-plugin-softcams-oscam-emu-pcsc-levi45-11968-803-all-2026-10-23",
+      "type": "download",
+      "title": "enigma2 plugin softcams oscam emu pcsc levi45 11968 803 all",
+      "date": "2026-10-24",
+      "category": "SoftCam",
+      "summary": "",
+      "body": "",
+      "mainCategory": "SoftCam",
+      "subcategory": "Oscam",
+      "version": "levi45 11968 803 all",
+      "size": "",
+      "file": "downloads/enigma2-plugin-softcams-oscam-emu-pcsc-levi45_11968-803_all.deb",
+      "receivers": [],
+      "screenshots": [],
+      "installation": "",
+      "files": [
+        "downloads/enigma2-plugin-softcams-oscam-emu-pcsc-levi45_11968-803_all.deb",
+        "downloads/enigma2-plugin-softcams-oscam-emu-pcsc-levi45_11968-803_all.ipk"
+      ]
+    },
+    {
       "id": "enigma2-plugin-extensions-levi45-addon-10-2-r0-all-2026-10-20",
       "type": "download",
       "title": "levi45 addon 10.2 r0 all",
@@ -97,25 +118,6 @@
       ],
       "screenshots": [],
       "installation": ""
-    },
-    {
-      "id": "enigma2-plugin-softcams-oscam-emu-pcsc-levi45-11968-803-all-2026-10-23",
-      "type": "download",
-      "title": "enigma2 plugin softcams oscam emu pcsc levi45 11968 803 all",
-      "date": "2026-10-23",
-      "category": "SoftCam",
-      "summary": "",
-      "body": "",
-      "mainCategory": "SoftCam",
-      "subcategory": "Oscam",
-      "version": "oscam-emu-pcsc-levi45_11968-803",
-      "size": "",
-      "file": "downloads/enigma2-plugin-softcams-oscam-emu-pcsc-levi45_11968-803_all.ipk",
-      "receivers": [
-        "All images all boxes"
-      ],
-      "screenshots": [],
-      "installation": "install as normal"
     },
     {
       "id": "welcome",
