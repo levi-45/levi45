@@ -37,6 +37,26 @@ function syncCategoryHash(){const h=location.hash.slice(1);if(!h.startsWith('cat
 function el(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n}
 function link(label,hash,cls){const a=el('a',cls,label);a.href=hash;return a}
 function safeDownload(path){if(typeof path!=='string')return null;const s=path.trim();if(/^downloads\/[a-zA-Z0-9_./-]+$/.test(s)&&!s.split('/').includes('..'))return './'+s; if(/^https:\/\/[\w.-]+(?:\/[\w!#$&'()*+,;=:@%./?~-]*)?$/.test(s))return s;return null}
+// Public Supabase project credentials (never put a secret/service-role key here).
+const COUNTER_URL='https://mxbgtvffcdpzeprngfjs.supabase.co';
+const COUNTER_KEY='sb_publishable_3C4EqKthkVf1bq5uBdtF8g_OxXDqsPB';
+const counterHeaders={'apikey':COUNTER_KEY,'Content-Type':'application/json'};
+// Stable per-resource/per-file ID; different files on one resource have different counters.
+function counterId(resourceId,source){return String(resourceId)+'::'+String(source)}
+async function readDownloadCount(id,display){
+ try{
+  const url=COUNTER_URL+'/rest/v1/download_counts?file_id=eq.'+encodeURIComponent(id)+'&select=download_count';
+  const r=await fetch(url,{headers:counterHeaders});if(!r.ok)throw Error('Counter read failed');
+  const rows=await r.json();display.textContent='Downloads: '+(rows.length?rows[0].download_count:0);
+ }catch(e){display.textContent='Downloads: unavailable'}
+}
+async function recordDownloadCount(id,display){
+ try{
+  const r=await fetch(COUNTER_URL+'/rest/v1/rpc/record_download',{method:'POST',headers:counterHeaders,body:JSON.stringify({p_file_id:id}),keepalive:true});
+  if(!r.ok)throw Error('Counter update failed');
+  const total=await r.json();display.textContent='Downloads: '+total;
+ }catch(e){display.textContent='Downloads: unavailable'}
+}
 function count(type){return items.filter(x=>x.type===type).length}
 function navigate(next){view=next;category='All';render()}
 function resourceDetails(x){
@@ -86,7 +106,16 @@ function render(){const root=$('content');root.replaceChildren();if(syncCategory
    if(x.installation){a.append(el('h3','','Installation instructions'),el('div','article-body',x.installation))}
    const sources=Array.isArray(x.files)&&x.files.length?x.files:(x.file?[x.file]:[]);
    const valid=sources.map(safeDownload).filter(Boolean);
-   if(valid.length){a.append(el('h3','','Available downloads'));valid.forEach((path,i)=>{const label=decodeURIComponent(path.split('/').pop().split('?')[0])||('File '+(i+1));const button=link('⬇ Download '+(valid.length>1?(i+1)+' — ':'')+label,path,'download-now');button.setAttribute('download','');button.setAttribute('target','_blank');button.setAttribute('rel','noopener noreferrer');a.append(button)})}
+   if(valid.length){a.append(el('h3','','Available downloads'));valid.forEach((path,i)=>{
+     const label=decodeURIComponent(path.split('/').pop().split('?')[0])||('File '+(i+1));
+     const button=link('⬇ Download '+(valid.length>1?(i+1)+' — ':'')+label,path,'download-now');
+     if(path.startsWith('./downloads/'))button.setAttribute('download','');
+     button.setAttribute('target','_blank');button.setAttribute('rel','noopener noreferrer');
+     const display=el('span','muted small','Downloads: …');
+     const row=el('div','download-entry');row.append(button,document.createTextNode(' '),display);a.append(row);
+     const id=counterId(x.id,path);readDownloadCount(id,display);
+     button.addEventListener('click',()=>{recordDownloadCount(id,display)});
+   })}
    else a.append(el('p','muted','No download file has been added yet.'));
    a.append(el('p','muted small','Check compatibility and back up your receiver before installing.'));
  }
